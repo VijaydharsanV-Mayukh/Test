@@ -40,6 +40,45 @@
   padding-left: 100%;
   animation: marquee 15s linear infinite;
 }
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: #282c34; /* Background color for contrast */
+  padding: 10px 0;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 1.5em; /* Adjust font size */
+  color: #61dafb; /* Initial color */
+  animation: marquee 15s linear infinite, colorChange 3s ease-in-out infinite;
+}
+
+/* Marquee scrolling effect */
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Color transition effect */
+@keyframes colorChange {
+  0% {
+    color: #61dafb; /* Start color */
+  }
+  50% {
+    color: #ff6b6b; /* Mid color */
+  }
+  100% {
+    color: #61dafb; /* End color */
+  }
+}
 
 @keyframes marquee {
   from {
