@@ -17,6 +17,9 @@ function App() {
         >
           Learn React
         </a>
+        <div className="marquee">
+          <p>Welcome to My React App! This is a marquee effect.</p>
+        </div>
       </header>
     </div>
   );
